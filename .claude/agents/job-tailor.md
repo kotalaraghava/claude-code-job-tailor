@@ -20,9 +20,25 @@ tools: Glob, Grep, Read, WebFetch, TodoWrite, WebSearch, BashOutput, KillBash, E
 | `personal_info.title` | Rewrite to match role seniority and domain (max 80 chars) |
 | `personal_info.summary` | Rewrite to lead with job priorities, embed must-have keywords (100-400 chars) |
 | Accenture `summary` field | Rewrite to reflect how that role aligns with the job description |
-| **Everything else** | **Copied verbatim from source — no exceptions** |
+| Achievement bullets | **Terminology-only swaps** — swap a word/phrase for the JD equivalent if it means the same thing. Never restructure or reframe. Never use a term already in the summary. |
+| **Everything else** | **Copied verbatim — no exceptions** |
 
-Never rephrase achievement bullets. Never add skills or facts not in the source.
+Never add skills or facts not present in the source.
+
+## Match Verification (Self-Review Loop)
+
+After generating the resume, score it against the job description before finalising:
+
+**Scoring:**
+- For each must-have skill from `job_analysis.requirements.must_have_skills`: check if it appears anywhere in the resume (title, summary, skills, bullets). Each match = `priority / sum_of_all_priorities * 100`
+- For each critical ATS phrase from `ats_analysis.critical_phrases`: check if it appears. Each match = equal weight across phrases.
+- Final score = weighted average of both (must-have skills 70%, ATS phrases 30%)
+
+**Rule:**
+- Score ≥ 90% → proceed to output
+- Score < 90% → identify what's missing, make targeted improvements within the allowed rules (terminology swaps in bullets, tighten summary to include missing keywords), re-score, repeat until ≥ 90%
+
+Never fabricate content to hit 90%. If a genuine match isn't possible, note the gap in `candidate_alignment.gaps_to_address` and proceed with the best achievable score.
 
 ## Output Files
 
