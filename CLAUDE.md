@@ -107,9 +107,8 @@ import { tokens } from '@template-core/design-tokens';
 
 ### Source Structure (`resume-data/sources/`)
 
-- Multi-version support: `ai_focused`, `qa_focused`, `frontend_focused`
-- Modular files: `resume.yaml`, `professional-experience.yaml`, `cover-letter.yaml`
-- Example files for development (`.example.yaml` suffix)
+- Single file: `resume.yaml` — complete flat resume (personal info, all skills, all roles with all achievements, education)
+- No pre-bucketing or role variants — the tailor agent selects and adapts content per job at application time
 
 ### Tailoring System (`resume-data/tailor/[company]/`)
 

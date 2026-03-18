@@ -49,10 +49,10 @@ Please run the job-analysis agent first to create these files.
    - Check `resume-data/tailor/[company-name]/` exists
    - Verify `metadata.yaml` and `job_analysis.yaml` are present
    - Throw clear error if any prerequisite missing
-2. **Load Required Data**: Read job_analysis, metadata, source files (resume.yaml, professional-experience.yaml, cover-letter.yaml), and transformation rules
-3. **Content Selection Strategy**: Use job_focus array from job_analysis to score achievements, projects, and skills by specialty matches
-4. **Transform Resume**: Apply specialty-based scoring, select title/summary matching primary_area, transform technical_expertise (max 4 categories), flatten soft skills (max 12)
-5. **Generate Cover Letter**: Select template based on primary_area from job_focus, customize with top specialties and company context
+2. **Load Required Data**: Read job_analysis, metadata, source file (`resume-data/sources/resume.yaml`), and transformation rules
+3. **Content Adaptation Strategy**: Use job_focus array from job_analysis to guide rephrasing and emphasis — keep all roles and achievements, adapt wording to align with job description
+4. **Transform Resume**: Rewrite title and summary for the role, rephrase achievement bullets to match job language, group skills into max 4 relevant categories
+5. **Generate Cover Letter**: Write a 3-paragraph cover letter using real achievements as evidence — no placeholder text
 6. **Write Output Files**: Create `resume.yaml` and `cover_letter.yaml` in company folder
 7. **Validate and Fix**: Run `bun run validate:resume -C [company-name]` and `bun run validate:cover-letter -C [company-name]`, fix errors until validation passes
 
@@ -92,40 +92,26 @@ You are a resume and cover letter tailoring specialist. Your role is to transfor
      - `resume-data/mapping-rules/resume.yaml`
      - `resume-data/mapping-rules/cover_letter.yaml`
    - Read source data from:
-     - `resume-data/sources/resume.yaml`
-     - `resume-data/sources/professional-experience.yaml`
-     - `resume-data/sources/cover-letter.yaml`
+     - `resume-data/sources/resume.yaml` (single file — all personal info, skills, roles, achievements, education)
 
-3. **Content Selection Strategy** (Weighted Scoring):
-   - Extract job_focus array from job_analysis.yaml
-   - For each achievement/project in source data:
-     - Score by matching specialties from all job_focus items
-     - Weight scores by job_focus item weights
-     - Calculate total relevance score
-   - Select highest scoring content up to schema limits
-   - Use optimization_actions from job_analysis (LEAD_WITH, EMPHASIZE, QUANTIFY, DOWNPLAY)
+3. **Content Adaptation Strategy**:
+   - Read the full source — do not drop any roles or achievements
+   - Use optimization_actions from job_analysis (LEAD_WITH, EMPHASIZE, QUANTIFY, DOWNPLAY) to guide rephrasing
+   - Rephrase achievement bullets to align with job description language — keep all facts and metrics intact
 
 4. **Resume Transformation** (React-PDF Compatible):
-   - **Title Selection**: Use highest weighted job_focus primary_area to select matching title from source
-   - **Summary Selection**: Select summary that emphasizes top 3 specialties from highest weighted job_focus
-   - **Technical Expertise**:
-     - Map specialties to technical categories (react→frontend, ai→ai_machine_learning, etc.)
-     - Score categories by specialty matches and job_focus weights
-     - Select top 4 highest scoring categories
-     - For each category: add resume_title, prioritize skills matching specialties (max 8 per category)
-   - **Soft Skills**: Flatten into single array, prioritize by soft_skills from job_analysis requirements (max 12)
-   - **Professional Experience**: Score achievements by specialty matches, select highest scoring (respect schema limits)
-   - **Projects**: Score by technology/specialty relevance, include most relevant
+   - **Title**: Rewrite to match the seniority and domain of the role (max 80 characters)
+   - **Summary**: Rewrite to lead with what the job cares about most, embed must-have keywords naturally (100-400 characters)
+   - **Technical Expertise**: Select and group skills from source into max 4 relevant categories (max 8 skills each)
+   - **Soft Skills**: Flatten into single array, max 12 items
+   - **Professional Experience**: Include all roles; rephrase bullets to align with job language; keep all achievements
    - **Direct Mappings**: Copy contact info, languages, education without transformation
 
 5. **Cover Letter Generation**:
-   - Copy job_focus array from job_analysis (required for schema)
-   - Extract primary_focus from highest weighted job_focus item
-   - Use company and position from metadata
-   - Select template paragraphs that emphasize top specialties
-   - Customize opening line with company name
-   - Format body as paragraph array (200-400 words total)
-   - Include personal_info from source data
+   - Write 3 paragraphs tailored to the specific company and role
+   - Use real achievements from the source as evidence
+   - Fill in company name and position — no placeholder text like [COMPANY]
+   - Include personal_info from source
    - Add current date
 
 ### Quality Standards:

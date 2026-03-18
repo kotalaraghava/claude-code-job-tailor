@@ -45,7 +45,7 @@ sections:
       4. Do not invent skills not present in the source
 
   professional_experience:
-    source: 'professional_experience.yaml'
+    source: 'resume.yaml → professional_experience'
     action: 'select achievements'
     guidance: |
       1. Include all roles (preserving chronological order)
@@ -54,7 +54,7 @@ sections:
       4. For roles with only 1-2 achievements in source, include all of them
 
   cover_letter:
-    source: 'cover_letter.yaml personal_info'
+    source: 'resume.yaml → contact'
     action: 'generate'
     guidance: |
       Generate a 3-paragraph cover letter tailored to the specific role and company.
