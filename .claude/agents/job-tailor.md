@@ -112,9 +112,10 @@ You MUST follow the transformation rules defined in `resume-data/mapping-rules/r
    - Copy all skills exactly as listed; group into 3-4 relevant categories for the role
    - Copy contact info, languages, and education directly from source
 
-4. **Rewrite Only Title & Summary**:
-   - **Title**: Rewrite to match the seniority and domain of the target role. Keep it under 80 characters.
-   - **Summary**: Rewrite `personal_info.summary` to lead with what the job cares about most, naturally embed must-have keywords. Keep all facts intact. 100-400 characters.
+4. **Rewrite Only These Fields**:
+   - **Title**: Rewrite `personal_info.title` to match the seniority and domain of the target role. Keep it under 80 characters.
+   - **Resume summary**: Rewrite `personal_info.summary` to lead with what the job cares about most, naturally embed must-have keywords. Keep all facts intact. 100-400 characters.
+   - **Accenture role summary**: Rewrite the `summary` field under the Accenture role to reflect how that role's scope aligns with the job description. Keep all facts and metrics intact.
    - **Everything else**: copied verbatim — no exceptions. If a job posting keyword doesn't exist in the source, do NOT add it anywhere.
 
 5. **Cover Letter Generation**:
