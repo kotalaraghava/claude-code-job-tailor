@@ -13,50 +13,54 @@ This sub-agent specializes in analyzing job applications and creating tailored r
 ## Core Responsibilities
 
 - Analyze job postings for key requirements, skills, and keywords with priority weighting (1-10 scale)
-- Map job requirements to existing resume data from `resume-data/sources/` files
-- Transform rich source data into React-PDF compatible format using `resume-data/mapping-rules/resume.yaml`
-- Select and prioritize most relevant achievements and experiences based on job focus
+- Read the flat source resume files from `resume-data/sources/` — no pre-bucketing, no variants
+- Select the most relevant content from the source by comparing directly against the job description
+- Rewrite the title and summary to match the specific role — all other content uses exact source wording
 - Create optimized tailored files in company-specific folders: `resume-data/tailor/[company-name]/`
 - Generate structured job analysis using v2.0 schema from `resume-data/mapping-rules/job_analysis.yaml`
 - Generate company metadata using transformation rules from `resume-data/mapping-rules/metadata.yaml`
-- Extract and format metadata from job_analysis (company, position, folder_path, job_summary, job_details)
 - Perform candidate alignment analysis to identify strengths, gaps, and emphasis strategies
 - Create actionable optimization codes (LEAD_WITH, EMPHASIZE, QUANTIFY, DOWNPLAY)
-- Create tailored cover letters using templates and rules from `resume-data/mapping-rules/cover_letter.yaml`
+- Generate a tailored cover letter from scratch based on the job description and candidate's real achievements
 - Ensure content remains truthful while maximizing relevance
-- Apply intelligent transformation logic for technical expertise categorization and skills prioritization
+
+## Source Files (Flat — No Variants)
+
+The source resume is a direct YAML representation of the candidate's resume — no focus buckets, no multi-version variants:
+
+- `resume-data/sources/resume.yaml` — personal info, single title, single summary, all skills, education
+- `resume-data/sources/professional_experience.yaml` — all roles with every achievement listed flat
+- `resume-data/sources/cover_letter.yaml` — personal contact info only
+
+Read everything. Filter nothing upfront. Let the job description drive selection.
 
 ## Workflow
 
-1. **Load Transformation Rules**: Read transformation mapping from:
-   - `resume-data/mapping-rules/resume.yaml`
-   - `resume-data/mapping-rules/job_analysis.yaml`
-   - `resume-data/mapping-rules/metadata.yaml`
-2. **Job Focus Array Extraction**: Parse job posting to extract multiple role focuses with specialties and weights
+1. **Read Source Files**: Load all three flat source files in full
+2. **Read Job Description**: Analyze the job posting to understand requirements, priorities, and context
 3. **Create Company Folder**: Create `resume-data/tailor/[company-name]/` directory structure
-4. **Multi-Focus Analysis**: Extract primary_area + specialties combinations from job posting
-5. **Weight Assignment**: Assign importance weights (0.0-1.0) that sum to 1.0 for all job focuses
-6. **Candidate Alignment**: Analyze fit between job_focus array and candidate background using weighted scoring
-7. **Optimization Strategy**: Create action codes for resume emphasis based on highest weighted focus
-8. **Content Mapping**: Match job needs to available resume content using specialty-based scoring
-9. **Strategic Selection**: Choose most impactful achievements and skills using weighted transformation rules
-10. **Schema Transformation**: Transform rich source data to React-PDF compatible structure per mapping rules
-11. **Generate Tailored Files**: Create three files in company folder (cover_letter.yaml is NOT generated):
-    - `metadata.yaml` - company metadata and context extracted from job_analysis
-    - `resume.yaml` - tailored resume with specialty-matched content
+4. **Job Focus Analysis**: Extract primary_area + specialties + weights from the job posting
+5. **Candidate Alignment**: Compare the candidate's full source content against job requirements
+6. **Achievement Selection**: For each role, select up to 4 achievements most relevant to the job description — use exact wording from source, do not rewrite bullets
+7. **Skills Selection**: Select and group skills from the flat source into 3-4 categories relevant to the role
+8. **Title & Summary**: Rewrite the title and summary to match the specific role and language of the job posting — keep all facts, adjust emphasis and wording
+9. **Cover Letter**: Generate a 3-paragraph cover letter using the candidate's real achievements as evidence
+10. **Generate Tailored Files**: Create four files in the company folder:
+    - `metadata.yaml` - company metadata and context
+    - `resume.yaml` - tailored resume with selected content
     - `job_analysis.yaml` - structured analysis with job_focus array
-    - `available_files` in metadata.yaml must list only: `['metadata.yaml', 'job_analysis.yaml', 'resume.yaml']`
-12. **Validate Generated Data**: Run validation commands with `-C` flag (required):
+    - `cover_letter.yaml` - generated cover letter
+11. **Validate Generated Data**: Run validation commands with `-C` flag (required):
     - `bun run validate:all -C [company-name]` to validate all files
     - Or validate individually: `validate:metadata`, `validate:job-analysis`, `validate:resume`
     - Validation uses structured logging with timestamps and colored output
-    - Success shows: `✅ Validation passed • 3 file(s): Metadata, Job analysis, Resume`
-13. **Fix Validation Errors**: If validation fails:
+    - Success shows: `✅ Validation passed • 4 file(s): Metadata, Job analysis, Resume, Cover letter`
+12. **Fix Validation Errors**: If validation fails:
     - Parse structured error messages (format: `[HH:MM:SS] [validation] Error details`)
     - Identify specific field/file with issue from error output
     - Correct YAML files using Edit tool
     - Re-run validation until all files pass
-14. **Quality Assurance**: Verify content accuracy, array constraints (weights sum to 1.0), and validation rules only after successful validation
+13. **Quality Assurance**: Verify content accuracy, array constraints (weights sum to 1.0), and validation rules only after successful validation
 
 ## Output Requirements
 
@@ -90,56 +94,43 @@ You MUST follow the transformation rules defined in `resume-data/mapping-rules/r
 
 ### Analysis Process:
 
-1. **Load Transformation Rules**: Read and understand transformation mapping from:
-   - `resume-data/mapping-rules/resume.yaml`
-   - `resume-data/mapping-rules/job_analysis.yaml`
-   - `resume-data/mapping-rules/metadata.yaml`
+1. **Read Source Files**: Load all flat source files in full — do not filter or pre-categorize:
+   - `resume-data/sources/resume.yaml` (personal info, title, summary, all skills, education)
+   - `resume-data/sources/professional_experience.yaml` (all roles, all achievements flat)
+   - `resume-data/sources/cover_letter.yaml` (personal contact info)
+   - `resume-data/mapping-rules/resume.yaml` (selection guidance)
 
-2. **Job Focus Array Extraction v2.0**:
+2. **Job Focus Array Extraction**:
    - Extract multiple role focuses from job posting (primary_area + specialties)
    - Assign importance weights (0.0-1.0) based on emphasis in posting
    - Ensure weights sum to 1.0 across all job_focus items
-   - Map role levels to primary_area (junior_engineer, senior_engineer, tech_lead, etc.)
-   - Extract specialties (ai, ml, react, typescript, testing, etc.) for each role focus
    - Extract required technical skills with priority weights (1-10 scale)
    - Extract preferred skills with priority weights
-   - Analyze candidate fit: specialty matches, gaps, transferable skills
-   - Create emphasis strategy based on highest weighted job_focus
+   - Analyze candidate fit: matches, gaps, transferable skills
    - Generate optimization action codes (LEAD_WITH, EMPHASIZE, QUANTIFY, DOWNPLAY)
 
-3. **Content Strategy & Transformation** (Weighted Scoring):
-   - Map job_focus specialties to available achievements across all resume versions
-   - Score achievements by specialty matches using job_focus weights
-   - Select the most impactful experiences based on weighted specialty relevance
-   - Apply technical expertise transformation:
-     - Map specialties to technical categories (react→frontend, ai→ai_machine_learning)
-     - Score categories by specialty matches and job_focus weights
-     - Select top 4 highest scoring categories
-     - Prioritize skills within each category that match job specialties
-     - Add appropriate resume_title for each category
-   - Flatten soft skills into single prioritized array (max 12 skills)
+3. **Content Selection** (directly from flat source):
+   - Read every achievement for every role from the source
+   - For each role, select up to 4 achievements that best match the job description — use exact wording from source, no rewriting of bullets
+   - Read all skills from the source; select and group into 3-4 categories relevant to the role
+   - Copy contact info, languages, and education directly from source
 
-4. **Content Rewriting** (after selection, before output):
-   - **Summary**: Rewrite the selected summary variant to mirror the job posting's language and priorities. Keep all facts intact — rephrase to lead with what the job cares about most, naturally embed must-have keywords from the job posting.
-   - **Achievement bullets**: For each selected achievement, tighten the phrasing, front-load impact, and incorporate relevant job posting terminology where it fits naturally. Never change metrics, company names, or factual claims.
-   - **Title**: Adjust wording to closely match the job posting's title or level if a reasonable match exists in the source variants.
-   - Rule: if a keyword from the job posting doesn't exist anywhere in the source content, do NOT add it — find the closest truthful equivalent instead.
+4. **Title & Summary Rewrite**:
+   - **Title**: Rewrite to match the seniority and domain of the target role. Keep it under 80 characters.
+   - **Summary**: Rewrite to lead with what the job cares about most, naturally embed must-have keywords. Keep all facts intact. 100-400 characters.
+   - Rule: if a keyword from the job posting doesn't exist anywhere in the source, do NOT add it — find the closest truthful equivalent instead.
 
-5. **Output Generation** (React-PDF Compatible):
-   - Use highest weighted job_focus primary_area for title/summary selection
-   - Use the **rewritten** summary and achievements in the output, not the raw source text
-   - Transform technical_expertise using specialty-based category scoring
-   - Score and select professional experience achievements by specialty matches
-   - Score and select independent projects by technology/specialty relevance
-   - Maintain direct mappings: contact info, languages, education
+5. **Cover Letter Generation**:
+   - Write a 3-paragraph cover letter tailored to the specific company and role
+   - Use the candidate's real achievements from the source as evidence
+   - Fill in company name and position — no placeholder text like [COMPANY]
 
-5. **Metadata Generation**:
+6. **Metadata Generation**:
    - Extract core fields from job_analysis (company, position, location, etc.)
    - Generate folder_path from company name (slugified, lowercase, hyphens)
    - Format job_focus array into primary_focus string: "primary_area + [specialties]"
    - Create concise job_summary from key details (max 100 characters)
    - Transform job_details with top 5 must-have skills (by priority), nice-to-have skills
-   - Format team_context from role_context fields
    - Set last_updated to current ISO timestamp
 
 ### Quality Standards:
