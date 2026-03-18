@@ -49,6 +49,8 @@ export interface FileToValidate {
   type: z.ZodSchema<unknown>;
   /** Key to extract nested data from YAML wrapper, or null if file is not wrapped */
   wrapperKey: string | null;
+  /** If true, file is not required — missing files are silently skipped */
+  optional?: boolean;
 }
 
 /**
@@ -61,7 +63,7 @@ export type FileToValidateWithYamlData = FileToValidate & { data: unknown };
  */
 export type YamlFilesAndSchemasToWatch = Pick<
   FileToValidate,
-  'fileName' | 'type' | 'wrapperKey'
+  'fileName' | 'type' | 'wrapperKey' | 'optional'
 > & { key: keyof typeof import('@shared/core/config').COMPANY_FILES };
 
 // ============================================================================

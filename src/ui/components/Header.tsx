@@ -5,9 +5,10 @@ import { FileText, Mail } from 'lucide-react';
 interface HeaderProps {
   activeDocument: 'resume' | 'cover-letter';
   onDocumentChange: (document: 'resume' | 'cover-letter') => void;
+  hasCoverLetter?: boolean;
 }
 
-export const Header: React.FC<HeaderProps> = ({ activeDocument, onDocumentChange }) => {
+export const Header: React.FC<HeaderProps> = ({ activeDocument, onDocumentChange, hasCoverLetter = false }) => {
   return (
     <header className="border-b border-border px-6 py-2">
       <div className="grid grid-cols-[300px_1fr_200px] items-center">
@@ -32,13 +33,15 @@ export const Header: React.FC<HeaderProps> = ({ activeDocument, onDocumentChange
             <FileText />
             Resume
           </Button>
-          <Button
-            variant={activeDocument === 'cover-letter' ? 'default' : 'outline'}
-            onClick={() => onDocumentChange('cover-letter')}
-          >
-            <Mail />
-            Cover Letter
-          </Button>
+          {hasCoverLetter && (
+            <Button
+              variant={activeDocument === 'cover-letter' ? 'default' : 'outline'}
+              onClick={() => onDocumentChange('cover-letter')}
+            >
+              <Mail />
+              Cover Letter
+            </Button>
+          )}
         </div>
       </div>
     </header>

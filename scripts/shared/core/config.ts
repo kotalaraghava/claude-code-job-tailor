@@ -96,6 +96,7 @@ export const TAILOR_YAML_FILES_AND_SCHEMAS: Array<YamlFilesAndSchemasToWatch> = 
     fileName: COMPANY_FILES.COVER_LETTER,
     type: CoverLetterSchema,
     wrapperKey: 'cover_letter',
+    optional: true,
   },
 ];
 

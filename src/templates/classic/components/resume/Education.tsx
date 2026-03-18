@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
   sectionTitle: {
     color: colors.primary,
     fontFamily: 'Lato Bold',
-    fontSize: 11,
+    fontSize: 10,
     textTransform: 'uppercase',
   },
   educationEntry: {
@@ -23,22 +23,22 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'flex-start',
-    marginBottom: 2,
+    marginBottom: 1,
   },
   institution: {
     fontFamily: 'Lato Bold',
-    fontSize: 10,
+    fontSize: 9,
     color: colors.primary,
   },
   program: {
     fontFamily: 'Lato',
-    fontSize: 10,
+    fontSize: 9,
     color: colors.darkGray,
-    marginBottom: 2,
+    marginBottom: 1,
   },
   locationDuration: {
     fontFamily: 'Lato',
-    fontSize: 10,
+    fontSize: 9,
     color: colors.mediumGray,
     textAlign: 'right',
   },

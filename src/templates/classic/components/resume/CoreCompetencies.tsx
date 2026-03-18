@@ -11,15 +11,15 @@ const styles = StyleSheet.create({
   },
   sectionTitle: {
     fontFamily: 'Lato Bold',
-    fontSize: 11,
+    fontSize: 10,
     color: colors.primary,
     textTransform: 'uppercase',
   },
   skillsText: {
     fontFamily: 'Lato',
-    fontSize: 10,
+    fontSize: 9,
     color: colors.darkGray,
-    lineHeight: 1.4,
+    lineHeight: 1.3,
   },
   separator: {
     width: '100%',

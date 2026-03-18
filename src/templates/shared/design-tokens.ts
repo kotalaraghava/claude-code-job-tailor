@@ -54,9 +54,9 @@ const modernTokens = {
 // Classic theme design tokens (traditional, single-column layout)
 const classicTokens = {
   colors: {
-    // Monochrome color scheme (black/gray only)
-    primary: tailwindColors.zinc[900],
-    accent: tailwindColors.zinc[900], // No accent color - same as primary
+    // Teal accent matching traditional resume style
+    primary: tailwindColors.teal[700],
+    accent: tailwindColors.teal[700],
 
     // Semantic colors
     darkGray: tailwindColors.zinc[800],
@@ -68,35 +68,35 @@ const classicTokens = {
   },
   typography: {
     text: {
-      size: 10,
+      size: 9,
       fontFamily: 'Lato',
-      lineHeight: 1.4,
+      lineHeight: 1.3,
     },
     title: {
-      fontSize: 11,
+      fontSize: 10,
       fontFamily: 'Lato Bold',
       textTransform: 'uppercase' as const,
-      marginBottom: 4,
+      marginBottom: 3,
       lineHeight: 1.2,
     },
     subtitle: {
-      fontSize: 10,
+      fontSize: 9,
       fontFamily: 'Lato Bold',
       textTransform: 'none' as const,
       marginBottom: 2,
       lineHeight: 1.2,
     },
     small: {
-      fontSize: 9,
-      lineHeight: 1.4,
+      fontSize: 8,
+      lineHeight: 1.3,
     },
   },
   spacing: {
     columnWidth: 0, // Single column layout
-    documentPadding: 42,
-    pagePadding: 8,
+    documentPadding: 30,
+    pagePadding: 5,
     profileImageSize: 48, // Square profile image (48x48)
-    listItemSpacing: 3,
+    listItemSpacing: 2,
   },
 };
 

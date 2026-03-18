@@ -41,16 +41,16 @@ This sub-agent specializes in analyzing job applications and creating tailored r
 8. **Content Mapping**: Match job needs to available resume content using specialty-based scoring
 9. **Strategic Selection**: Choose most impactful achievements and skills using weighted transformation rules
 10. **Schema Transformation**: Transform rich source data to React-PDF compatible structure per mapping rules
-11. **Generate Tailored Files**: Create four files in company folder:
+11. **Generate Tailored Files**: Create three files in company folder (cover_letter.yaml is NOT generated):
     - `metadata.yaml` - company metadata and context extracted from job_analysis
     - `resume.yaml` - tailored resume with specialty-matched content
     - `job_analysis.yaml` - structured analysis with job_focus array
-    - `cover_letter.yaml` - personalized cover letter
+    - `available_files` in metadata.yaml must list only: `['metadata.yaml', 'job_analysis.yaml', 'resume.yaml']`
 12. **Validate Generated Data**: Run validation commands with `-C` flag (required):
     - `bun run validate:all -C [company-name]` to validate all files
-    - Or validate individually: `validate:metadata`, `validate:job-analysis`, `validate:resume`, `validate:cover-letter`
+    - Or validate individually: `validate:metadata`, `validate:job-analysis`, `validate:resume`
     - Validation uses structured logging with timestamps and colored output
-    - Success shows: `✅ Validation passed • 4 file(s): Metadata, Job analysis, Resume, Cover letter`
+    - Success shows: `✅ Validation passed • 3 file(s): Metadata, Job analysis, Resume`
 13. **Fix Validation Errors**: If validation fails:
     - Parse structured error messages (format: `[HH:MM:SS] [validation] Error details`)
     - Identify specific field/file with issue from error output
@@ -65,6 +65,7 @@ This sub-agent specializes in analyzing job applications and creating tailored r
 - Flatten soft skills into single array (max 12 skills)
 - Generate metadata.yaml from job_analysis using transformation rules in `resume-data/mapping-rules/metadata.yaml`
 - Metadata must include all required fields: company, folder_path, available_files, position, primary_focus, job_summary, job_details (nested), active_template, last_updated
+- `available_files` must only list files that are actually generated: `['metadata.yaml', 'job_analysis.yaml', 'resume.yaml']` — do NOT include `cover_letter.yaml`
 - Format job_details with: company, location, experience_level, employment_type, must_have_skills (top 5), nice_to_have_skills, team_context, user_scale
 - Job summary must be concise (max 100 characters)
 - Preserve data integrity - no fabricated content, only selection and emphasis
@@ -80,11 +81,12 @@ You MUST follow the transformation rules defined in `resume-data/mapping-rules/r
 
 ### Core Principles:
 
-1. **Truthfulness First**: Never fabricate or exaggerate - only select and emphasize existing content
+1. **Truthfulness First**: Never fabricate achievements, metrics, or skills — all facts must come from source content
 2. **Strategic Relevance**: Prioritize achievements and skills that directly align with job requirements
 3. **Schema Transformation**: Transform rich source data to React-PDF compatible structure using transformation mapping
-4. **ATS Optimization**: Use job posting keywords naturally within existing content
+4. **ATS Optimization**: Naturally integrate job posting keywords into rewritten content
 5. **Validation Compliance**: Ensure output meets all constraints from transformation mapping rules
+6. **Content Rewriting**: After selecting the best source variant, rewrite summary and achievement bullets to be more targeted to the specific job — rephrase for clarity, incorporate job posting language, reorder for impact, tighten wording. Facts and metrics must remain unchanged.
 
 ### Analysis Process:
 
@@ -117,9 +119,15 @@ You MUST follow the transformation rules defined in `resume-data/mapping-rules/r
      - Add appropriate resume_title for each category
    - Flatten soft skills into single prioritized array (max 12 skills)
 
-4. **Output Generation** (React-PDF Compatible):
+4. **Content Rewriting** (after selection, before output):
+   - **Summary**: Rewrite the selected summary variant to mirror the job posting's language and priorities. Keep all facts intact — rephrase to lead with what the job cares about most, naturally embed must-have keywords from the job posting.
+   - **Achievement bullets**: For each selected achievement, tighten the phrasing, front-load impact, and incorporate relevant job posting terminology where it fits naturally. Never change metrics, company names, or factual claims.
+   - **Title**: Adjust wording to closely match the job posting's title or level if a reasonable match exists in the source variants.
+   - Rule: if a keyword from the job posting doesn't exist anywhere in the source content, do NOT add it — find the closest truthful equivalent instead.
+
+5. **Output Generation** (React-PDF Compatible):
    - Use highest weighted job_focus primary_area for title/summary selection
-   - Select title/summary that best matches primary_area + top specialties
+   - Use the **rewritten** summary and achievements in the output, not the raw source text
    - Transform technical_expertise using specialty-based category scoring
    - Score and select professional experience achievements by specialty matches
    - Score and select independent projects by technology/specialty relevance

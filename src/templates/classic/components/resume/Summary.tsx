@@ -11,15 +11,15 @@ const styles = StyleSheet.create({
   },
   sectionTitle: {
     fontFamily: 'Lato Bold',
-    fontSize: 11,
+    fontSize: 10,
     color: colors.primary,
     textTransform: 'uppercase',
     marginBottom: 0,
   },
   summaryText: {
     fontFamily: 'Lato',
-    fontSize: 10,
-    lineHeight: 1.4,
+    fontSize: 9,
+    lineHeight: 1.3,
     color: colors.darkGray,
     marginBottom: spacing.pagePadding / 2,
   },

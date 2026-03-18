@@ -60,14 +60,15 @@ export const validateFilePathsExists = (
   pathsToValidate: FileToValidate[],
 ): Result<FileToValidate[]> => {
   const missingFiles = pathsToValidate.filter((item) => !existsSync(item.path));
+  const missingRequired = missingFiles.filter((item) => !item.optional);
 
-  if (missingFiles.length > 0) {
-    const expectedFiles = pathsToValidate.map((f) => f.fileName);
+  if (missingRequired.length > 0) {
+    const expectedFiles = pathsToValidate.filter((f) => !f.optional).map((f) => f.fileName);
     const foundFiles = pathsToValidate.filter((f) => existsSync(f.path)).map((f) => f.fileName);
-    const missingFileNames = missingFiles.map((f) => f.fileName);
+    const missingFileNames = missingRequired.map((f) => f.fileName);
 
     const errorLines = [
-      `Missing ${missingFiles.length} required file(s):`,
+      `Missing ${missingRequired.length} required file(s):`,
       ...missingFileNames.map((name) => `  - ${name}`),
       `Expected files: ${expectedFiles.join(', ')}`,
       `Found files: ${foundFiles.length > 0 ? foundFiles.join(', ') : 'none'}`,
@@ -80,5 +81,6 @@ export const validateFilePathsExists = (
     };
   }
 
-  return { success: true, data: pathsToValidate };
+  // Filter out optional files that don't exist — they're silently skipped
+  return { success: true, data: pathsToValidate.filter((item) => existsSync(item.path)) };
 };

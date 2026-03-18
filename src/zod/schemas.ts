@@ -209,5 +209,5 @@ export const ApplicationDataSchema = z.object({
   metadata: MetadataSchema,
   resume: ResumeSchema,
   job_analysis: JobAnalysisSchema,
-  cover_letter: CoverLetterSchema,
+  cover_letter: CoverLetterSchema.optional(),
 });

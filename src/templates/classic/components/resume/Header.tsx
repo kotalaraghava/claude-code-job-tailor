@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
   // Name styling - larger, centered
   name: {
     color: colors.primary,
-    fontSize: 16,
+    fontSize: 14,
     fontFamily: 'Lato Bold',
     textTransform: 'capitalize',
     marginBottom: 2,
@@ -44,16 +44,16 @@ const styles = StyleSheet.create({
   // Subtitle/title styling
   subtitle: {
     color: colors.darkGray,
-    fontSize: 10,
+    fontSize: 9,
     fontFamily: 'Lato',
-    marginBottom: 4,
+    marginBottom: 3,
   },
 
   // Contact line styling - centered
   contactLine: {
     flexDirection: 'row',
     flexWrap: 'wrap',
-    fontSize: 9,
+    fontSize: 8,
     fontFamily: 'Lato',
     color: colors.darkGray,
     justifyContent: 'center',

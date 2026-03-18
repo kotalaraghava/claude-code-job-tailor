@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
   sectionTitle: {
     color: colors.primary,
     fontFamily: 'Lato Bold',
-    fontSize: 11,
+    fontSize: 10,
     textTransform: 'uppercase',
   },
   experienceEntry: {
@@ -20,23 +20,23 @@ const styles = StyleSheet.create({
   },
   positionTitle: {
     fontFamily: 'Lato Bold',
-    fontSize: 10,
+    fontSize: 9,
     color: colors.primary,
-    marginBottom: 2,
+    marginBottom: 1,
   },
   companyDateRow: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'baseline',
-    marginBottom: 4,
+    marginBottom: 2,
   },
   companyLocation: {
     fontFamily: 'Lato',
-    fontSize: 10,
+    fontSize: 9,
     color: colors.darkGray,
   },
   dateRange: {
-    fontSize: 10,
+    fontSize: 9,
     color: colors.mediumGray,
     textAlign: 'right',
   },
@@ -46,21 +46,21 @@ const styles = StyleSheet.create({
     marginBottom: 1,
   },
   bullet: {
-    fontSize: 10,
+    fontSize: 9,
     color: colors.darkGray,
-    marginRight: 6,
+    marginRight: 5,
   },
   achievementText: {
     flex: 1,
     fontSize: 9,
     color: colors.darkGray,
-    lineHeight: 1.4,
+    lineHeight: 1.3,
   },
   descriptionText: {
-    fontSize: 10,
+    fontSize: 9,
     color: colors.darkGray,
-    lineHeight: 1.4,
-    marginBottom: 4,
+    lineHeight: 1.3,
+    marginBottom: 3,
   },
   separator: {
     width: '100%',

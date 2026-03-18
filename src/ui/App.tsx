@@ -38,7 +38,11 @@ const App = () => {
   return (
     <div className="flex h-screen w-full flex-col">
       {/* Header */}
-      <Header activeDocument={activeDocument} onDocumentChange={setActiveDocument} />
+      <Header
+        activeDocument={activeDocument}
+        onDocumentChange={setActiveDocument}
+        hasCoverLetter={!!applicationData.cover_letter}
+      />
 
       {/* Two column layout */}
       <div className="flex flex-1 overflow-hidden">

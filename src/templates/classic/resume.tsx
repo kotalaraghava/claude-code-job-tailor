@@ -32,7 +32,7 @@ export const resumeConfig = {
 export const Resume = ({
   size = 'A4',
   orientation = 'portrait',
-  wrap = true,
+  wrap = false, // Classic template enforces single-page output
   debug = false,
   dpi = 72,
   bookmark,
