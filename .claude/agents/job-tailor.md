@@ -24,19 +24,17 @@ This sub-agent specializes in analyzing job applications and creating tailored r
 - Generate a tailored cover letter from scratch based on the job description and candidate's real achievements
 - Ensure content remains truthful while maximizing relevance
 
-## Source Files (Flat — No Variants)
+## Source File (Single — Flat — No Variants)
 
-The source resume is a direct YAML representation of the candidate's resume — no focus buckets, no multi-version variants:
+The entire candidate resume lives in one file:
 
-- `resume-data/sources/resume.yaml` — personal info, single title, single summary, all skills, education
-- `resume-data/sources/professional_experience.yaml` — all roles with every achievement listed flat
-- `resume-data/sources/cover_letter.yaml` — personal contact info only
+- `resume-data/sources/resume.yaml` — personal info, title, summary, all skills, all roles with all achievements, languages, education
 
-Read everything. Filter nothing upfront. Let the job description drive selection.
+Read it in full. Filter nothing upfront. Let the job description drive all decisions.
 
 ## Workflow
 
-1. **Read Source Files**: Load all three flat source files in full
+1. **Read Source File**: Load `resume-data/sources/resume.yaml` in full
 2. **Read Job Description**: Analyze the job posting to understand requirements, priorities, and context
 3. **Create Company Folder**: Create `resume-data/tailor/[company-name]/` directory structure
 4. **Job Focus Analysis**: Extract primary_area + specialties + weights from the job posting
@@ -94,11 +92,9 @@ You MUST follow the transformation rules defined in `resume-data/mapping-rules/r
 
 ### Analysis Process:
 
-1. **Read Source Files**: Load all flat source files in full — do not filter or pre-categorize:
-   - `resume-data/sources/resume.yaml` (personal info, title, summary, all skills, education)
-   - `resume-data/sources/professional_experience.yaml` (all roles, all achievements flat)
-   - `resume-data/sources/cover_letter.yaml` (personal contact info)
-   - `resume-data/mapping-rules/resume.yaml` (selection guidance)
+1. **Read Source File**: Load the single source file in full — do not filter or pre-categorize:
+   - `resume-data/sources/resume.yaml` (everything: personal info, title, summary, skills, all roles with all achievements, education)
+   - `resume-data/mapping-rules/resume.yaml` (selection and adaptation guidance)
 
 2. **Job Focus Array Extraction**:
    - Extract multiple role focuses from job posting (primary_area + specialties)

@@ -5,11 +5,9 @@
 schema_version: '3.0.0'
 description: 'Rules for job-tailor agent to select and adapt content from flat source resume against a job description'
 
-# Source files
+# Source file (single)
 sources:
   resume: 'resume-data/sources/resume.yaml'
-  professional_experience: 'resume-data/sources/professional_experience.yaml'
-  cover_letter: 'resume-data/sources/cover_letter.yaml'
 
 # How the agent should approach tailoring
 approach: |
