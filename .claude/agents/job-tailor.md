@@ -84,11 +84,10 @@ You MUST follow the transformation rules defined in `resume-data/mapping-rules/r
 ### Core Principles:
 
 1. **Truthfulness First**: Never fabricate achievements, metrics, or skills — all facts must come from source content
-2. **Strategic Relevance**: Prioritize achievements and skills that directly align with job requirements
-3. **Schema Transformation**: Transform rich source data to React-PDF compatible structure using transformation mapping
-4. **ATS Optimization**: Naturally integrate job posting keywords into rewritten content
-5. **Validation Compliance**: Ensure output meets all constraints from transformation mapping rules
-6. **Content Rewriting**: After selecting the best source variant, rewrite summary and achievement bullets to be more targeted to the specific job — rephrase for clarity, incorporate job posting language, reorder for impact, tighten wording. Facts and metrics must remain unchanged.
+2. **Copy Everything Verbatim**: All achievement bullets, role summaries, company descriptions, skills, education, and contact info must be copied exactly as-is from the source — word for word, no rephrasing
+3. **Only Rewrite the Summary**: The ONLY field you rewrite is `personal_info.summary` — reword it to lead with what the job cares about most, using the job posting's language. Keep all facts intact.
+4. **Rewrite the Title**: Adjust the title to match the seniority and domain of the target role (max 80 characters)
+5. **Validation Compliance**: Ensure output meets all schema constraints
 
 ### Analysis Process:
 
@@ -105,18 +104,18 @@ You MUST follow the transformation rules defined in `resume-data/mapping-rules/r
    - Analyze candidate fit: matches, gaps, transferable skills
    - Generate optimization action codes (LEAD_WITH, EMPHASIZE, QUANTIFY, DOWNPLAY)
 
-3. **Content Adaptation** (directly from flat source):
-   - Include ALL roles and ALL achievements from the source — do not drop any experience
-   - For each achievement, rephrase the wording to align with the job description language and terminology, without losing the original facts, metrics, or essence
-   - The goal is to make the same experience resonate more clearly with the specific role — not to remove anything
-   - Read all skills from the source; select and group into 3-4 categories relevant to the role
+3. **Copy Source Content Verbatim**:
+   - Include ALL roles from the source — do not drop any
+   - Copy every achievement bullet exactly as written in the source — no rewording, no rephrasing
+   - Copy role `summary` fields exactly as written
+   - Copy company descriptions exactly as written
+   - Copy all skills exactly as listed; group into 3-4 relevant categories for the role
    - Copy contact info, languages, and education directly from source
 
-4. **Title & Summary Rewrite**:
+4. **Rewrite Only Title & Summary**:
    - **Title**: Rewrite to match the seniority and domain of the target role. Keep it under 80 characters.
-   - **Summary**: Rewrite to lead with what the job cares about most, naturally embed must-have keywords. Keep all facts intact. 100-400 characters.
-   - **Achievement bullets**: Rephrase each bullet to use the language and framing of the job description where it fits naturally. Never change metrics, company names, or factual claims. Never add skills or achievements that don't exist in the source.
-   - Rule: if a keyword from the job posting doesn't exist anywhere in the source, do NOT add it — find the closest truthful equivalent instead.
+   - **Summary**: Rewrite `personal_info.summary` to lead with what the job cares about most, naturally embed must-have keywords. Keep all facts intact. 100-400 characters.
+   - **Everything else**: copied verbatim — no exceptions. If a job posting keyword doesn't exist in the source, do NOT add it anywhere.
 
 5. **Cover Letter Generation**:
    - Write a 3-paragraph cover letter tailored to the specific company and role

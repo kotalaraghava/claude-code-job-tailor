@@ -1,7 +1,7 @@
 // @ts-nocheck
 // Auto-generated application data - TypeScript validation disabled
 // Company: teradata
-// Generated at: 2026-03-18T10:08:27.196Z
+// Generated at: 2026-03-18T10:52:59.907Z
 
 import type { ApplicationData } from '@types';
 
@@ -257,7 +257,7 @@ const applicationData: ApplicationData = {
   },
   "resume": {
     "name": "Kotala Raghavendra",
-    "title": "AI Engineering Manager | Agentic AI, RAG & Enterprise LLM Systems",
+    "title": "Senior Manager, AI Engineering | LLM Systems & Agentic AI",
     "contact": {
       "phone": "+918151866266",
       "email": "kraghava1933@gmail.com",
@@ -272,10 +272,13 @@ const applicationData: ApplicationData = {
         "duration": "Jul 2021 - Present",
         "company_description": "Global professional services firm delivering AI-driven digital transformation for enterprise clients at scale.",
         "achievements": [
-          "Led and grew a team of 4+ engineers — recruiting, running 1:1s, and managing performance — while owning technical direction to build an Agentic AI Orchestrator and Seller Copilot for enterprise sellers, impacting 10,000+ customers and increasing deal velocity by 50%.",
-          "Architected the transition of a legacy Semantic Kernel chatbot to a LlamaIndex-based agentic orchestrator; built a production-grade orchestrator library with built-in observability, streaming, and tool management — adopted by 4 teams, standardizing agent development across the organization.",
-          "Built a hybrid RAG system enabling enterprise sellers to query 5,000+ concession and amendment documents using natural language; combined semantic search, BM25, and LLM-extracted keyword scoring — achieving 90% faster retrieval and accelerating deal closures.",
-          "Built and integrated an AWS-to-Azure Invoice Mapping skill into the agentic orchestrator as a callable tool, covering 1.7M SKUs with 80% automation accuracy; implemented a disk-based caching layer that eliminated live DB queries on 1M+ record tables — reducing mapping time from weeks to 2-4 minutes and saving 6,080 days of manual effort."
+          "Led and grew a team of 4+ engineers — recruiting, 1:1s, and performance management — while owning technical direction for an Agentic AI platform serving 10,000+ enterprise customers and increasing deal velocity by 50%.",
+          "Designed and delivered a scalable LLM-based agentic workflow system using LlamaIndex, migrating from a legacy classification chatbot to a production-grade orchestration framework with built-in observability, streaming, and tool management — adopted by 4 teams, standardizing agentic AI development across the organization.",
+          "Built a hybrid RAG pipeline enabling enterprise sellers to query 5K+ documents using natural language; combined semantic vector search, BM25, and LLM-extracted keyword scoring — achieving 90% faster retrieval and directly accelerating business outcomes.",
+          "Developed and integrated an Invoice Mapping ML skill as a callable tool within the agentic platform, covering 1.7M SKUs with 80% automation accuracy; implemented a caching layer that eliminated live DB queries on 1M+ record tables — reducing processing time from weeks to 2-4 minutes and saving 6,080 days of manual effort.",
+          "Optimized LLM application performance through advanced prompt engineering — improving classification, entity extraction, and response generation; enforced structured outputs and multi-turn support to ensure reliability and eliminate parsing errors at scale.",
+          "Ensured enterprise-grade reliability and observability by implementing distributed logging, ICM integration, streaming, load balancing, and Azure AFD — improving production stability and reducing mean time to debug across the AI platform.",
+          "Managed end-to-end deployment across cloud and hybrid environments using Azure CI/CD pipelines; configured rate limiting, traffic management, and cost controls via Azure Front Door and Traffic Manager."
         ]
       },
       {
@@ -285,8 +288,8 @@ const applicationData: ApplicationData = {
         "duration": "Dec 2019 - Jul 2021",
         "company_description": "Technology startup building AI-driven products for media and enterprise process intelligence.",
         "achievements": [
-          "Built an AI-driven news trustworthiness system using Doccano and BERT-based NLP to classify articles into known biases and score credibility — improving user retention and subscription rates.",
-          "Improved an enterprise process mining tool using Python, pandas, and distributed mechanisms — enhancing processing efficiency and fault tolerance to support successful client demos."
+          "Built a production ML pipeline for news trustworthiness classification using BERT-based NLP and Doccano annotation tooling — scoring article credibility at scale to improve user retention and subscription rates.",
+          "Improved a Python-based enterprise data processing service using pandas and distributed mechanisms — enhancing throughput and fault tolerance to support successful client demonstrations."
         ]
       },
       {
@@ -294,10 +297,10 @@ const applicationData: ApplicationData = {
         "position": "Associate Tech Lead",
         "location": "Bangalore, India",
         "duration": "Mar 2018 - Dec 2019",
-        "company_description": "Cloud and AI consultancy delivering chatbot and NLP solutions for enterprise clients on AWS.",
+        "company_description": "Cloud and AI consultancy delivering conversational AI solutions for enterprise clients on AWS.",
         "achievements": [
-          "Led a team of 4+ engineers across multiple client chatbot projects, driving delivery through code reviews, error analysis, and mentoring.",
-          "Built and productionalized QnA and customer engagement chatbots using Amazon Lex and NLP techniques, deployed on AWS and integrated into client websites — reducing customer support call volume."
+          "Designed and productionalized LLM-based conversational AI applications — including QnA and customer engagement bots — for enterprise clients using NLP models, Amazon Lex, and Flask/FastAPI, deployed on AWS — reducing customer support call volume and improving user experience.",
+          "Led a team of 4+ engineers across multiple enterprise AI delivery projects, driving cross-functional execution through code reviews, technical mentoring, and error analysis."
         ]
       },
       {
@@ -305,8 +308,9 @@ const applicationData: ApplicationData = {
         "position": "Software Engineer",
         "location": "Bangalore, India",
         "duration": "Sep 2017 - Mar 2018",
+        "company_description": "EdTech startup building intelligent content classification tools for digital textbooks.",
         "achievements": [
-          "Developed an SVM classifier achieving 80% accuracy on OCR-extracted textbook pages and a rule-based engine to parse headings and keywords, improving content classification efficiency."
+          "Built and deployed an ML classification pipeline using SVM models trained on OCR-extracted textbook content, achieving 80% accuracy; developed a rule-based parsing engine for heading and keyword extraction, improving content processing efficiency."
         ]
       },
       {
@@ -314,8 +318,9 @@ const applicationData: ApplicationData = {
         "position": "Software Engineer",
         "location": "Bangalore, India",
         "duration": "Sep 2015 - Sep 2017",
+        "company_description": "Software testing company building QA frameworks and healthcare applications.",
         "achievements": [
-          "Built REST APIs for a healthcare application using Python and Django, and improved product quality by writing comprehensive test cases and regression scripts."
+          "Built Python/Django REST APIs for a healthcare application and established comprehensive test coverage through unit and regression scripts — improving product quality and deployment confidence."
         ]
       }
     ],
@@ -327,14 +332,14 @@ const applicationData: ApplicationData = {
         "duration": "Jun 2011 - Aug 2014"
       }
     ],
-    "summary": "AI Engineering Manager with 10 years of experience leading Gen AI teams and delivering production AI systems at enterprise scale. Architected a LlamaIndex-based agentic orchestrator and reusable library adopted by 4 teams; built hybrid RAG pipelines enabling 90% faster retrieval for enterprise sellers. Led a team of 4+ engineers including hiring, 1:1s, and performance management — while driving measurable business outcomes: 50% increase in deal velocity and 6,080 days of manual effort saved.",
+    "summary": "Engineering Manager with 10 years of experience designing and delivering scalable AI/ML systems in production — from LLM-based agentic workflows and hybrid RAG pipelines to enterprise-grade orchestration frameworks adopted by multiple teams. Led and grew a team of 4+ engineers through hiring, 1:1s, and performance management while owning technical direction for AI systems impacting 10,000+ enterprise customers. Strong cloud infrastructure experience across Azure, AWS, and GCP with distributed systems, CI/CD pipelines, and production reliability engineering.",
     "technical_expertise": [
       {
-        "resume_title": "AI & Gen AI",
+        "resume_title": "AI & LLM Systems",
         "skills": [
           "Agentic AI & Multi-Agent Orchestration",
           "LlamaIndex",
-          "Hybrid RAG (Semantic + Vector Search + BM25)",
+          "Hybrid RAG (Vector Search + BM25)",
           "Prompt Engineering",
           "OpenAI API / Azure OpenAI / Anthropic SDK",
           "PyTorch / BERT / NLP Models",
@@ -342,17 +347,17 @@ const applicationData: ApplicationData = {
         ]
       },
       {
-        "resume_title": "Leadership",
+        "resume_title": "Engineering Leadership",
         "skills": [
           "Team Management (4+ Engineers)",
           "Hiring & Performance Management",
           "1:1s, Mentoring & Code Review",
           "Cross-functional Delivery",
-          "Technical Roadmap Ownership"
+          "Technical Roadmap & AI Strategy"
         ]
       },
       {
-        "resume_title": "Cloud & DevOps",
+        "resume_title": "Cloud & Distributed Systems",
         "skills": [
           "Azure CI/CD, Front Door, Traffic Manager",
           "AWS / GCP",
@@ -361,7 +366,7 @@ const applicationData: ApplicationData = {
         ]
       },
       {
-        "resume_title": "Backend",
+        "resume_title": "Backend & Data",
         "skills": [
           "Python, FastAPI, Flask, Django",
           "REST APIs (async / event-driven)",
@@ -371,14 +376,14 @@ const applicationData: ApplicationData = {
       }
     ],
     "skills": [
-      "Cross-functional Teamwork",
+      "Cross-functional Collaboration",
       "Stakeholder Communication",
       "Technical Strategy & Roadmap",
       "Agile/Scrum Methodologies",
       "Mentorship & Coaching",
       "Analytical Thinking",
-      "Business Impact Analysis",
-      "Engineering Culture Building"
+      "Engineering Culture Building",
+      "Business Impact Analysis"
     ],
     "languages": [],
     "independent_projects": []
@@ -398,9 +403,9 @@ const applicationData: ApplicationData = {
       "letter_title": "Cover Letter — Senior Manager, AI Engineering",
       "opening_line": "Dear Teradata Hiring Team,",
       "body": [
-        "I am writing to express my strong interest in the Senior Manager, AI Engineering role at Teradata. With 10 years of experience building and leading Gen AI systems in production — and a track record of growing engineering teams that deliver measurable enterprise impact — I am excited by the opportunity to contribute to Teradata's AI engineering mission.",
-        "At Accenture, I led and grew a team of 4+ engineers while owning the technical direction for an Agentic AI Orchestrator and Seller Copilot platform serving 10,000+ enterprise customers. I architected a LlamaIndex-based orchestrator library that was adopted by 4 teams, standardizing agent development across the organization. I also built a hybrid RAG system combining semantic search, BM25, and LLM-extracted keyword scoring — enabling 90% faster retrieval and directly accelerating deal closures. These experiences map directly to Teradata's investment in LLM-based applications, RAG, and agentic workflows for enterprise customers.",
-        "I am drawn to Teradata's vision of turning AI innovation into customer-ready solutions on a trusted, enterprise-grade platform. My combination of hands-on AI engineering depth — LlamaIndex, OpenAI APIs, Azure cloud, hybrid deployments — and proven people leadership — recruiting, performance management, 1:1s, technical mentoring — positions me to help your team build, scale, and deliver AI capabilities that enterprise organizations can rely on."
+        "I am writing to express my strong interest in the Senior Manager, AI Engineering role at Teradata. With 10 years of experience designing and delivering scalable LLM-based AI systems in production — and a track record of building and leading engineering teams that deliver measurable enterprise outcomes — I am excited by the opportunity to contribute to Teradata AI engineering mission.",
+        "At Accenture, I led a team of 4+ engineers while owning technical direction for an Agentic AI platform serving 10,000+ enterprise customers. I designed and delivered a LlamaIndex-based agentic workflow framework adopted by 4 teams — standardizing AI development practices across the organization. I also built a hybrid RAG pipeline combining semantic vector search and BM25 scoring, enabling 90% faster document retrieval for enterprise sellers, and managed end-to-end deployments across cloud and hybrid Azure environments with full observability, CI/CD, and load balancing. These experiences map directly to Teradata focus on scalable AI/ML systems, LLM-based applications, and enterprise-grade reliability.",
+        "Teradata vision of delivering trusted, connected AI capabilities to enterprise customers resonates strongly with my background in production AI systems and engineering leadership. I am particularly drawn to the opportunity to define AI engineering best practices and help teams ship customer-ready AI solutions at scale. I would welcome the chance to discuss how my experience can contribute to Teradata AI engineering roadmap."
       ],
       "signature": "Sincerely,\nKotala Raghavendra\n"
     }
