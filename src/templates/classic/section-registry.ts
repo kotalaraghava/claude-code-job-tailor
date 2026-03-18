@@ -5,9 +5,7 @@ import Header from './components/resume/Header';
 import Summary from './components/resume/Summary';
 import Experience from './components/resume/Experience';
 import TechnicalSkills from './components/resume/TechnicalSkills';
-import CoreCompetencies from './components/resume/CoreCompetencies';
 import Education from './components/resume/Education';
-import Languages from './components/resume/Languages';
 
 // Cover letter section components
 import CoverLetterHeader from './components/cover-letter/Header';
@@ -74,16 +72,6 @@ export const RESUME_SECTIONS: ResumeSectionConfig[] = [
     description: 'Professional summary - Profile',
   },
 
-  // ========== EDUCATION SECTION ==========
-  {
-    documentType: 'resume',
-    id: 'education',
-    component: Education,
-    isVisible: (data) => (data.education?.length ?? 0) > 0,
-    order: 2,
-    description: 'Educational background',
-  },
-
   // ========== EXPERIENCE SECTION ==========
   {
     documentType: 'resume',
@@ -94,8 +82,18 @@ export const RESUME_SECTIONS: ResumeSectionConfig[] = [
       const hasProfessionalExperience = (data.professional_experience?.length ?? 0) > 0;
       return hasIndependentProjects || hasProfessionalExperience;
     },
-    order: 3,
+    order: 2,
     description: 'Professional experience and independent projects',
+  },
+
+  // ========== EDUCATION SECTION ==========
+  {
+    documentType: 'resume',
+    id: 'education',
+    component: Education,
+    isVisible: (data) => (data.education?.length ?? 0) > 0,
+    order: 3,
+    description: 'Educational background',
   },
 
   // ========== TECHNICAL SKILLS SECTION ==========
@@ -108,25 +106,6 @@ export const RESUME_SECTIONS: ResumeSectionConfig[] = [
     description: 'Technical expertise and skills',
   },
 
-  // ========== LANGUAGES SECTION ==========
-  {
-    documentType: 'resume',
-    id: 'languages',
-    component: Languages,
-    isVisible: (data) => (data.languages?.length ?? 0) > 0,
-    order: 5,
-    description: 'Language proficiencies',
-  },
-
-  // ========== CORE COMPETENCIES SECTION ==========
-  {
-    documentType: 'resume',
-    id: 'core-competencies',
-    component: CoreCompetencies,
-    isVisible: (data) => (data.skills?.length ?? 0) > 0,
-    order: 6,
-    description: 'Soft skills and competencies',
-  },
 ];
 
 /**

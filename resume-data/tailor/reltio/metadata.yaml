@@ -1,0 +1,52 @@
+# Company Context File
+# This file contains all the context information for this specific company
+# Used by the /tailor command to set active company context
+
+# Active company name (matches folder name in resume-data/tailor/)
+company: 'Reltio'
+
+# Full path to company's tailor folder
+folder_path: 'resume-data/tailor/reltio'
+
+# List of files that exist in the company folder
+available_files:
+  - 'metadata.yaml'
+  - 'job_analysis.yaml'
+  - 'resume.yaml'
+  - 'cover_letter.yaml'
+
+# Template/theme to use for PDF generation (defaults to 'modern')
+active_template: 'classic'
+
+# Job details extracted from job_analysis.yaml
+position: 'Manager, AI'
+
+# Primary job focus area from job_analysis.yaml (highest weighted primary_area)
+primary_focus: 'engineering_manager + [ai, ml, python, architecture]'
+
+# Brief summary of job requirements (max 100 chars)
+job_summary: 'Cloud-native MDM SaaS, lead AI team building GenAI/RAG enterprise features'
+
+# Extended job details for context
+job_details:
+  company: 'Reltio'
+  location: 'Remote (India)'
+  experience_level: 'Manager / Senior'
+  employment_type: 'Full-time'
+  must_have_skills:
+    - 'AI/ML Engineering Leadership'
+    - 'LLM / GenAI Systems (LangChain, LlamaIndex)'
+    - 'Python'
+    - 'RAG & Multi-Agent Systems'
+    - 'Team Leadership & People Management'
+  nice_to_have_skills:
+    - 'Master Data Management (MDM)'
+    - 'Data Quality & Governance'
+    - 'FastAPI / REST API Design'
+    - 'OpenAI / Azure OpenAI SDK'
+    - 'Agile / Scrum delivery'
+  team_context: 'AI Engineering team within cloud-native SaaS, cross-functional with product, data science, and platform'
+  user_scale: 'Enterprise customers globally on Reltio cloud-native MDM platform'
+
+# Timestamp when metadata was last generated (ISO format)
+last_updated: '2026-03-13T10:00:00Z'

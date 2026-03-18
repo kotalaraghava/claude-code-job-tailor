@@ -1,0 +1,121 @@
+resume:
+  name: 'Kotala Raghavendra'
+  title: 'Engineering Manager | AI/ML & Platform Engineering'
+  summary: 'Engineering Manager with 10 years of experience leading cross-functional AI/ML teams, driving technical direction from architecture to production; proven record in effort estimation, resource planning, risk management, code review, and delivering GenAI systems that directly impact business metrics at enterprise scale.'
+
+  contact:
+    phone: '+918151866266'
+    email: 'kraghava1933@gmail.com'
+    address: 'Bangalore, Karnataka, India'
+    linkedin: 'https://www.linkedin.com/in/kotala-raghavendra'
+
+  technical_expertise:
+    - resume_title: 'AI & Machine Learning'
+      skills:
+        - 'Agentic AI'
+        - 'Multi-Agent Systems'
+        - 'LangChain'
+        - 'LlamaIndex'
+        - 'RAG (Retrieval-Augmented Generation)'
+        - 'Prompt Engineering'
+        - 'OpenAI API'
+        - 'Vector Databases (Pinecone, Weaviate, ChromaDB, pgvector)'
+    - resume_title: 'Engineering Leadership'
+      skills:
+        - 'Technical Leadership'
+        - 'Code Review & Mentoring'
+        - 'Effort Estimation'
+        - 'Resource Planning'
+        - 'Risk Management'
+        - 'Cross-functional Team Leadership'
+        - 'Agile / Scrum'
+    - resume_title: 'Backend Development'
+      skills:
+        - 'Python'
+        - 'FastAPI'
+        - 'Flask'
+        - 'REST API Design (RESTful / asynchronous / event-driven)'
+        - 'PostgreSQL'
+        - 'MySQL'
+        - 'pandas'
+        - 'NLP'
+    - resume_title: 'Cloud & DevOps'
+      skills:
+        - 'Azure (Azure ML, Azure Functions, Azure DevOps, Azure AFD)'
+        - 'AWS'
+        - 'CI/CD'
+        - 'Distributed Logging / OpenTelemetry'
+        - 'API Gateways'
+        - 'Load Balancing'
+        - 'Git / GitHub'
+
+  skills:
+    - 'Analytical Thinking'
+    - 'System Design'
+    - 'Strategic Planning'
+    - 'Cross-functional Teamwork'
+    - 'Agile / Scrum Methodologies'
+    - 'Mentorship & Coaching'
+    - 'Stakeholder Communication'
+    - 'Technical Documentation'
+    - 'Code Review'
+
+  languages:
+    - language: 'English'
+      proficiency: 'Professional Working Proficiency'
+    - language: 'Telugu'
+      proficiency: 'Native'
+    - language: 'Hindi'
+      proficiency: 'Professional Working Proficiency'
+
+  professional_experience:
+    - company: 'Accenture'
+      position: 'Associate Manager'
+      location: 'Bangalore, India'
+      duration: 'Jul 2021 - Present'
+      company_description: 'Global professional services company delivering digital, cloud, and security capabilities across 40+ industries.'
+      achievements:
+        - 'Led a cross-functional team delivering a GenAI Multi-Agent Chatbot System impacting 10,000+ enterprise customers, increasing deal velocity by 50% and reducing incidents by 20%.'
+        - 'Owned technical direction and roadmap for multi-agent Agentic-AI ecosystem using LlamaIndex and LangChain, orchestrating agent lifecycle management and aligning deliverables to business objectives.'
+        - 'Built AI-powered AWS-to-Azure Invoice Mapping skill covering 1.7M SKUs in 8 weeks — saved 6,080 days of manual effort through planning, resource allocation, and quality assurance.'
+        - 'Drove continuous improvement practices including code review, effort estimation, risk management, and deployment strategies, improving team velocity and system reliability.'
+
+    - company: 'BigLittle Innovations'
+      position: 'Technical Staff Engineer'
+      location: 'Bangalore, India'
+      duration: 'Dec 2019 - Jul 2021'
+      company_description: 'Technology startup building AI-driven media and process intelligence products.'
+      achievements:
+        - 'Applied effort estimation and resource planning to deliver an enterprise process mining tool, managing risk and supporting practical demos that demonstrated revenue potential.'
+        - 'Built an AI-driven news trustworthiness system using NLP and vector search, contributing to product accuracy and user growth.'
+
+    - company: 'Power Up Cloud Technologies'
+      position: 'Associate Tech Lead'
+      location: 'Bangalore, India'
+      duration: 'Mar 2018 - Dec 2019'
+      company_description: 'Cloud-first technology consultancy delivering AI and automation solutions to enterprise clients.'
+      achievements:
+        - 'Led development of chatbot services by mentoring engineers, planning workflows, and conducting code reviews on GitHub, driving continuous improvement across multiple enterprise deliverables.'
+        - 'Designed and implemented a procurement chatbot using Amazon cloud infrastructure, applying QA standards and Postman-based API testing to ensure specification adherence.'
+
+    - company: 'PiRuby'
+      position: 'Software Engineer'
+      location: 'Bangalore, India'
+      duration: 'Sep 2017 - Mar 2018'
+      company_description: 'EdTech startup building AI-powered content classification and learning tools.'
+      achievements:
+        - 'Built an SVM classifier and rule-based engine for textbook content classification, demonstrating individual technical contribution and ML fundamentals.'
+
+    - company: 'TestMile Software Testing Pvt. Ltd.'
+      position: 'Software Engineer'
+      location: 'Bangalore, India'
+      duration: 'Sep 2015 - Sep 2017'
+      company_description: 'Software testing company providing test automation and quality assurance solutions.'
+      achievements:
+        - 'Built REST APIs for a healthcare application using Python and Django with enterprise security and scalable infrastructure, writing comprehensive test cases and Python regression scripts to improve product quality and ensure compliance with enterprise security standards.'
+
+  education:
+    - institution: 'JNTUA College of Engineering, Anantapur'
+      program: 'Bachelor of Engineering, Electrical and Electronics Engineering'
+      location: 'Anantapur, Andhra Pradesh, India'
+      duration: 'Jun 2011 - Aug 2014'

@@ -1,0 +1,154 @@
+version: '2.0.0'
+analysis_date: '2026-03-18'
+source: 'Teradata Job Posting — Senior Manager, AI Engineering — LinkedIn Job ID: 4376437896'
+
+job_analysis:
+  company: 'Teradata'
+  position: 'Senior Manager, AI Engineering'
+  job_focus:
+    - primary_area: 'engineering_manager'
+      specialties: ['ai', 'python', 'cloud']
+      weight: 0.55
+    - primary_area: 'engineering_manager'
+      specialties: ['ai', 'ml', 'llm']
+      weight: 0.35
+    - primary_area: 'senior_engineer'
+      specialties: ['python', 'distributed_systems', 'cloud']
+      weight: 0.10
+  location: 'Bengaluru / Hyderabad / Pune, India — Hybrid'
+  employment_type: 'Full-time'
+  experience_level: 'Senior Manager'
+
+  requirements:
+    must_have_skills:
+      - skill: 'Engineering Management (3+ years, managing senior engineers or managers)'
+        priority: 10
+      - skill: 'Production AI/ML Systems'
+        priority: 10
+      - skill: 'LLM-based Applications (RAG, agentic workflows, summarization, embeddings)'
+        priority: 10
+      - skill: '8+ years software engineering with AI/ML focus'
+        priority: 9
+      - skill: 'Cloud environments (AWS, Azure, or GCP)'
+        priority: 9
+      - skill: 'Distributed systems and data platforms'
+        priority: 8
+      - skill: 'Hiring, onboarding, performance management, career development'
+        priority: 8
+      - skill: 'Cross-functional collaboration (Product, Data Science, DevOps)'
+        priority: 7
+    nice_to_have_skills:
+      - skill: 'AI platforms or analytics products for enterprise customers'
+        priority: 8
+      - skill: 'Vector databases and semantic search'
+        priority: 7
+      - skill: 'In-database analytics'
+        priority: 6
+      - skill: 'ML pipelines (training, inference, monitoring)'
+        priority: 6
+      - skill: 'Data, analytics, or database domain experience'
+        priority: 5
+    soft_skills:
+      - 'Leadership and ownership'
+      - 'Clear technical communication to stakeholders'
+      - 'Ability to drive alignment across multiple teams'
+      - 'Balance short-term delivery with long-term platform evolution'
+      - 'Empowering teams to make decisions'
+    experience_years: 8
+    education: 'Not specified'
+
+  responsibilities:
+    primary:
+      - 'Lead, mentor, and grow a team of AI engineers and engineering managers'
+      - 'Drive hiring, onboarding, performance management, and career development'
+      - 'Own the design and delivery of scalable AI/ML systems (LLM, RAG, agentic workflows, ML pipelines)'
+      - 'Guide architectural decisions across cloud, on-prem, and hybrid environments'
+      - 'Partner with Product Management to translate business requirements into technical execution plans'
+    secondary:
+      - 'Build a strong engineering culture focused on ownership, quality, delivery, and collaboration'
+      - 'Communicate technical strategy, risks, and progress clearly to leadership and stakeholders'
+      - 'Help define Teradata AI engineering roadmap and best practices'
+      - 'Evaluate and adopt new technologies, frameworks, and tools in the AI/ML ecosystem'
+      - 'Ensure enterprise standards for performance, reliability, security, and cost efficiency'
+
+  role_context:
+    department: 'AI Engineering'
+    team_size: 'Managing team of AI engineers and engineering managers'
+    key_points:
+      - 'Teradata is a cloud analytics and data platform company investing heavily in AI engineering'
+      - 'AI rapidly reshaping enterprise software — converting AI innovation into customer-ready solutions'
+      - 'Multi-cloud and on-prem data platform for analytics and AI'
+      - 'Serving world-leading organizations solving complex data challenges at scale'
+      - 'Hybrid work model — flexible across Bengaluru, Hyderabad, Pune'
+
+  candidate_alignment:
+    strong_matches:
+      - 'Built and led production agentic AI orchestrator using LlamaIndex — adopted by 4 teams at Accenture'
+      - 'Hybrid RAG system (semantic search + BM25 + LLM keyword scoring) in enterprise production'
+      - '4+ years engineering management: recruiting, 1:1s, performance management, team growth'
+      - 'Azure cloud deployments — CI/CD, Azure Front Door, Traffic Manager, distributed logging'
+      - '10 years of AI/ML and Python backend experience with enterprise impact (10,000+ customers)'
+      - 'Advanced prompt engineering: classification, entity extraction, structured outputs, multi-turn'
+    gaps_to_address:
+      - 'Managing engineering managers (currently managed engineers, not managers-of-managers)'
+      - 'Enterprise data/analytics platform context (Teradata core is data warehousing/analytics)'
+      - 'Vector databases not explicitly named in resume — highlight BM25 + semantic search as equivalent'
+    transferable_skills:
+      - 'Enterprise seller AI platform (10,000+ customers) → enterprise analytics platform experience'
+      - 'LlamaIndex orchestrator library adopted by 4 teams → ability to standardize AI practices at org level'
+      - 'Azure CI/CD + hybrid deployments → cloud and hybrid environment experience'
+      - 'Hybrid RAG pipeline → closest equivalent to vector database / search experience'
+    emphasis_strategy: 'Lead with engineering manager identity + enterprise AI delivery track record. Emphasize scale of impact (10,000+ customers, 4 teams, 6,080 days saved). Position RAG and agentic orchestration as directly applicable to Teradata LLM platform work.'
+
+  section_priorities:
+    technical_expertise:
+      - 'ai_ml'
+      - 'leadership'
+      - 'devops'
+      - 'backend'
+    experience_focus: 'Highlight team leadership and enterprise AI delivery at Accenture. Lead each bullet with measurable impact. Emphasize orchestrator adoption, RAG system, and cross-team standardization — all signals of senior manager scope.'
+    project_relevance: 'No independent projects needed — professional experience is strong enough. If included, only AI/orchestration projects.'
+
+  optimization_actions:
+    LEAD_WITH:
+      - 'Agentic AI orchestration'
+      - 'Engineering leadership and team growth'
+      - 'Enterprise AI at scale'
+    EMPHASIZE:
+      - 'RAG systems (hybrid: semantic search + BM25)'
+      - 'LlamaIndex and LLM production deployments'
+      - 'Measurable business outcomes (deal velocity, retrieval speed, cost savings)'
+      - 'Cross-team standardization and adoption'
+      - 'Azure cloud and hybrid deployment experience'
+    QUANTIFY:
+      - 'Team size and growth'
+      - 'Customer impact (10,000+)'
+      - 'Retrieval improvement (90%)'
+      - 'Automation accuracy (80%)'
+      - 'Manual effort saved (6,080 days)'
+      - 'Deal velocity increase (50%)'
+    DOWNPLAY:
+      - 'PiRuby and TestMile early-career roles (briefly included for tenure, no emphasis)'
+      - 'Healthcare REST API work (not AI-relevant)'
+      - 'Database/analytics domain gaps — do not highlight absence'
+
+  ats_analysis:
+    title_variations:
+      - 'Senior Manager, AI Engineering'
+      - 'AI Engineering Manager'
+      - 'Engineering Manager, AI/ML'
+      - 'Head of AI Engineering'
+    critical_phrases:
+      - 'LLM-based applications'
+      - 'RAG'
+      - 'agentic workflows'
+      - 'scalable AI/ML systems'
+      - 'engineering management'
+      - 'cloud environments'
+      - 'distributed systems'
+      - 'production AI'
+
+  application_info:
+    posting_url: 'https://www.linkedin.com/jobs/view/4376437896'
+    posting_date: '2026-03-14'
+    deadline: 'Not specified'

@@ -12,24 +12,22 @@ const styles = StyleSheet.create({
   sectionTitle: {
     color: colors.primary,
     fontFamily: 'Lato Bold',
-    fontSize: 11,
+    fontSize: 10,
     textTransform: 'uppercase',
   },
-  categoryRow: {
-    flexDirection: 'row',
-    marginBottom: 3,
+  categoryBlock: {
+    marginBottom: 4,
   },
   categoryLabel: {
     fontFamily: 'Lato Bold',
-    fontSize: 10,
-    color: colors.darkGray,
-    marginRight: 4,
+    fontSize: 9,
+    color: colors.primary,
+    marginBottom: 1,
   },
   categoryContent: {
     fontFamily: 'Lato',
-    fontSize: 10,
+    fontSize: 9,
     color: colors.darkGray,
-    flex: 1,
   },
   separator: {
     width: '100%',
@@ -49,8 +47,8 @@ const TechnicalSkills = ({ resume }: { resume: ResumeSchema }) => {
       <Text style={styles.sectionTitle}>TECHNICAL SKILLS</Text>
       <View style={styles.separator} />
       {resume.technical_expertise.map((category, index) => (
-        <View key={index} style={styles.categoryRow}>
-          <Text style={styles.categoryLabel}>{category.resume_title}:</Text>
+        <View key={index} style={styles.categoryBlock}>
+          <Text style={styles.categoryLabel}>{category.resume_title}</Text>
           <Text style={styles.categoryContent}>{category.skills.join(', ')}</Text>
         </View>
       ))}

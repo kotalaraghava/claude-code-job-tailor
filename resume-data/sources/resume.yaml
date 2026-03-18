@@ -1,0 +1,99 @@
+version: '2.0.0'
+metadata:
+  last_updated: 'Bangalore, Wed 18. March 2026'
+
+personal_info:
+  name: 'Kotala Raghavendra'
+  titles:
+    ai_focused: 'AI Engineering Manager | Agentic AI & Gen AI Systems'
+    engineering_manager_focused: 'Engineering Manager | Gen AI & Python Backend'
+    backend_focused: 'Senior Python Engineer | FastAPI & Gen AI'
+  summaries:
+    ai_focused: 'AI Engineering Associate Manager with 10 years of experience building and leading Gen AI systems in production; architected an agentic AI orchestrator and reusable orchestrator library using LlamaIndex adopted by 4 teams, built hybrid RAG pipelines, and applied advanced prompt engineering to deliver measurable business impact for enterprise sellers.'
+    engineering_manager_focused: 'Engineering Associate Manager with 10 years of experience leading Gen AI teams and delivering production AI systems; grew and led a team of 4+ engineers including hiring, 1:1s, and performance management, while owning technical direction across agentic AI orchestration, hybrid RAG, and Python backend systems on Azure.'
+    backend_focused: 'Senior Python Engineer with 10 years of experience building scalable backend systems and Gen AI integrations; strong expertise in FastAPI, Flask, and Django with Azure cloud deployments, CI/CD pipelines, distributed logging, and production-grade agentic AI orchestrators using LlamaIndex and OpenAI APIs.'
+
+contact:
+  phone: '+918151866266'
+  email: 'kraghava1933@gmail.com'
+  address: 'Bangalore, Karnataka, India'
+  linkedin: 'https://www.linkedin.com/in/kotala-raghavendra'
+
+technical_expertise:
+  ai_ml:
+    - 'Agentic AI & Multi-Agent Systems'
+    - 'LlamaIndex'
+    - 'RAG (Retrieval-Augmented Generation)'
+    - 'Hybrid RAG (BM25 + Semantic Search)'
+    - 'Prompt Engineering'
+    - 'OpenAI API'
+    - 'Anthropic SDK'
+    - 'Azure OpenAI'
+    - 'Google AI SDKs'
+    - 'PyTorch'
+    - 'pandas'
+    - 'NumPy'
+    - 'BERT / NLP Models'
+  backend:
+    - 'Python'
+    - 'FastAPI'
+    - 'Flask'
+    - 'Django'
+    - 'REST APIs (RESTful / async / event-driven)'
+    - 'asyncio / Async Programming'
+    - 'PostgreSQL'
+    - 'MySQL'
+    - 'Database Schema Design & Optimization'
+    - 'pytest'
+    - 'Git / GitHub'
+    - 'Postman'
+  devops:
+    - 'Azure CI/CD Pipelines'
+    - 'Azure Front Door (AFD)'
+    - 'Azure Traffic Manager'
+    - 'AWS'
+    - 'GCP'
+    - 'Distributed Logging / OpenTelemetry'
+    - 'Load Balancing'
+    - 'API Gateways'
+    - 'ICM Integration'
+    - 'Streaming & Rate Limiting'
+  leadership:
+    - 'Team Management (4+ Engineers)'
+    - 'Technical Hiring & Recruiting'
+    - '1:1s & Performance Management'
+    - 'Code Review & Mentoring'
+    - 'Effort Estimation & Delivery'
+    - 'Cross-functional Collaboration'
+
+soft_skills:
+  problem_solving:
+    - 'Analytical Thinking'
+    - 'Pattern Recognition'
+    - 'Strategic Planning'
+    - 'Root Cause Analysis'
+  collaboration:
+    - 'Cross-functional Teamwork'
+    - 'Agile/Scrum Methodologies'
+    - 'Mentorship & Coaching'
+  communication:
+    - 'Technical Documentation'
+    - 'Stakeholder Communication'
+    - 'Business Impact Analysis'
+  leadership:
+    - 'Team Building'
+    - 'Performance Management'
+    - 'Recruiting & Hiring'
+    - 'Engineering Direction & Ownership'
+
+languages:
+  - language: 'English'
+    proficiency: 'Professional Working Proficiency'
+  - language: 'Telugu'
+    proficiency: 'Native'
+
+education:
+  - institution: 'JNTUA College of Engineering, Anantapur'
+    program: 'Bachelor of Engineering, Electrical and Electronics Engineering'
+    location: 'Anantapur, Andhra Pradesh, India'
+    duration: 'Jun 2011 - Aug 2014'

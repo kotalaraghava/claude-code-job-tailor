@@ -1,0 +1,139 @@
+version: '2.0.0'
+analysis_date: '2026-03-13'
+source: 'Reltio Job Posting - Manager, AI (Engineering Manager)'
+
+job_analysis:
+  company: 'Reltio'
+  position: 'Manager, AI'
+  job_focus:
+    - primary_area: 'engineering_manager'
+      specialties: ['ai', 'ml', 'python', 'architecture']
+      weight: 0.65
+    - primary_area: 'tech_lead'
+      specialties: ['ai', 'backend', 'python']
+      weight: 0.35
+  location: 'Remote (India)'
+  employment_type: 'Full-time'
+  experience_level: 'Manager / Senior'
+
+  requirements:
+    must_have_skills:
+      - skill: 'AI/ML Engineering Leadership'
+        priority: 10
+      - skill: 'LLM / GenAI Systems (LangChain, LlamaIndex)'
+        priority: 10
+      - skill: 'Python'
+        priority: 9
+      - skill: 'RAG & Multi-Agent Systems'
+        priority: 9
+      - skill: 'Team Leadership & People Management'
+        priority: 9
+      - skill: 'Cloud Deployments (Azure / AWS)'
+        priority: 8
+      - skill: 'Prompt Engineering'
+        priority: 8
+      - skill: 'Vector Databases'
+        priority: 7
+    nice_to_have_skills:
+      - skill: 'Master Data Management (MDM)'
+        priority: 7
+      - skill: 'Data Quality & Governance'
+        priority: 6
+      - skill: 'FastAPI / REST API Design'
+        priority: 6
+      - skill: 'OpenAI / Azure OpenAI SDK'
+        priority: 6
+      - skill: 'Agile / Scrum delivery'
+        priority: 5
+    soft_skills:
+      - 'Strategic thinking'
+      - 'Cross-functional collaboration'
+      - 'Stakeholder communication'
+      - 'Mentorship and coaching'
+      - 'Execution-oriented leadership'
+    experience_years: 8
+    education: 'Bachelor in Engineering / Computer Science or equivalent'
+
+  responsibilities:
+    primary:
+      - 'Lead and grow a team of AI/ML engineers building GenAI-powered features on the Reltio platform'
+      - 'Define and own the technical roadmap for AI capabilities including RAG, multi-agent workflows, and LLM integrations'
+      - 'Drive architecture decisions for scalable, production-grade AI systems on cloud infrastructure'
+      - 'Collaborate with product, data science, and platform teams to translate business requirements into AI solutions'
+      - 'Establish engineering best practices: code review, effort estimation, risk management, and CI/CD deployment'
+    secondary:
+      - 'Mentor engineers and build a high-performance AI team culture'
+      - 'Evaluate and integrate emerging LLM and AI frameworks to enhance platform capabilities'
+      - 'Ensure data quality, reliability, and governance in AI-driven pipelines'
+
+  role_context:
+    department: 'AI Engineering'
+    team_size: 'AI engineering team within a cloud-native SaaS platform serving enterprise customers globally'
+    key_points:
+      - 'Reltio is a cloud-native Master Data Management SaaS platform used by global enterprises'
+      - 'AI team is embedding GenAI into MDM workflows to automate data quality and entity resolution'
+      - 'High-impact role shaping the AI direction for enterprise data management at scale'
+      - 'Cross-functional collaboration with product, data science, and platform engineering'
+      - 'Opportunity to define AI architecture from ground up in a high-growth SaaS environment'
+
+  candidate_alignment:
+    strong_matches:
+      - 'Engineering Manager with 10 years in AI/ML — exact seniority and domain match'
+      - 'Multi-agent systems using LangChain and LlamaIndex — core Reltio AI stack'
+      - 'RAG pipelines and vector databases — directly used for Reltio MDM AI features'
+      - 'Prompt engineering and OpenAI/Azure OpenAI SDK — production LLM experience'
+      - 'Azure and AWS cloud deployments with CI/CD pipelines'
+      - 'Cross-functional team leadership with proven delivery impact (10K+ customers, 50% deal velocity)'
+      - 'Code review, effort estimation, risk management, resource planning'
+    gaps_to_address:
+      - 'No direct MDM or data governance domain experience'
+      - 'Limited data quality engineering background specific to enterprise MDM'
+    transferable_skills:
+      - 'Enterprise-scale GenAI delivery at Accenture → directly applicable to Reltio enterprise AI'
+      - 'AWS-to-Azure Invoice Mapping (1.7M SKUs) → data reconciliation skills transfer to MDM entity resolution'
+      - 'RAG for concession documents → knowledge-base retrieval applicable to MDM data queries'
+    emphasis_strategy: 'Lead with AI engineering management credentials and GenAI system delivery; frame MDM gap as a domain context bridge from deep enterprise AI experience'
+
+  section_priorities:
+    technical_expertise:
+      - 'ai_machine_learning'
+      - 'backend'
+      - 'devops_cloud'
+      - 'leadership'
+    experience_focus: 'Select engineering_manager_focused and ai_ml_focused achievements from Accenture; emphasize multi-agent orchestration, RAG, LLM delivery, and team leadership with business impact metrics'
+    project_relevance: 'Include AI/ML-driven projects demonstrating production scale. Downplay pure QA or frontend-only achievements.'
+
+  optimization_actions:
+    LEAD_WITH:
+      - 'AI/ML engineering management'
+      - 'Multi-agent systems and RAG'
+    EMPHASIZE:
+      - 'Team leadership and delivery ownership'
+      - 'LangChain / LlamaIndex expertise'
+      - 'Production GenAI at enterprise scale'
+    QUANTIFY:
+      - '10,000+ customers impacted'
+      - '50% deal velocity increase'
+      - '6,080 days of manual effort saved'
+      - '80% automation accuracy'
+      - '90% faster retrieval'
+    DOWNPLAY:
+      - 'Pure backend/API roles without AI context'
+      - 'QA and testing-specific achievements'
+
+  ats_analysis:
+    title_variations:
+      - 'Manager, AI'
+      - 'AI Engineering Manager'
+      - 'Engineering Manager - GenAI'
+    critical_phrases:
+      - 'multi-agent systems'
+      - 'RAG pipeline'
+      - 'LangChain and LlamaIndex'
+      - 'GenAI production deployment'
+      - 'AI engineering leadership'
+
+  application_info:
+    posting_url: 'https://www.reltio.com/company/careers/'
+    posting_date: '2026-03-01'
+    deadline: 'Not specified'
